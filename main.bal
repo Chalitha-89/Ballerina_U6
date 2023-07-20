@@ -8,6 +8,11 @@ type Greeting record {|
 
 configurable int port = 9090;
 
+type Order record {|
+    string name;
+    float price;
+|};
+
 service http:Service / on new http:Listener(port) {
     resource function get greeting() returns string {
         string message = "Hello";
