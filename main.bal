@@ -22,7 +22,7 @@ service http:Service / on new http:Listener(port) {
         io:println(int:avg(10, 20, 30, 40));
         io:println(int:avg(10, 20, 30, 40));
 
-        int sizeInMB = 10; // Target size in MB
+        int sizeInMB = 2; // Target size in MB
         int sizeInBytes = sizeInMB * 1024 * 1024; // Converting to bytes
 
         byte[] largeArray = [];
