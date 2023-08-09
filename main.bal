@@ -15,12 +15,6 @@ configurable int port = 9090;
 
 service http:Service / on new http:Listener(port) {
     resource function get greeting() returns string {
-        
-        string message = "Hello";
-        io:println(int:avg(10, 20, 30, 40));
-        io:println(int:avg(10, 20, 30, 40));
-        io:println(int:avg(10, 20, 30, 40));
-        io:println(int:avg(10, 20, 30, 40));
 
         int sizeInMB = 2; // Target size in MB
         int sizeInBytes = sizeInMB * 1024 * 1024; // Converting to bytes
@@ -40,6 +34,9 @@ service http:Service / on new http:Listener(port) {
         ];
         var average = from var {price} in orders
             collect avg(price);
+
+        string message = "Hello";
+        io:println(int:avg(10, 20, 30, 40));
         io:println(average);
         return message;
     }
