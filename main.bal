@@ -11,6 +11,9 @@ type Order record {|
     float price;
 |};
 
+const int[] ERROR_CODES = [404, 500, 503];
+const ERROR_MESSAGES = ["Not Found", "Internal Server Error", "Service Unavailable"];
+
 configurable int port = 9090;
 
 service http:Service / on new http:Listener(port) {
